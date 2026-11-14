@@ -5,12 +5,6 @@
 
 Base de datos relacional en MySQL para el sistema de información de la empresa **MiAutoPuntoCom** (gestión de inventario y venta de vehículos). Cubre de forma íntegra las **4 partes** solicitadas: creación de tablas normalizadas, restricciones e integridad referencial, carga de datos de prueba y consultas analíticas.
 
-## Diagrama entidad-relación
-
-![Diagrama ER](diagrama/er_diagram.png)
-
-*Nota: el diagrama se generó automáticamente a partir de las tablas creadas en MySQL y dibuja la relación Vehículos–Ventas como 1 a muchos por defecto. En la práctica funciona como 1 a 1, ya que `id_vehiculo` tiene una restricción `UNIQUE` en `Ventas` para evitar vender el mismo vehículo más de una vez.*
-
 ## Decisiones de diseño
 
 | Tabla | Decisión | Por qué |
@@ -31,12 +25,10 @@ Base de datos relacional en MySQL para el sistema de información de la empresa 
 ```text
 .
 ├── README.md
-├── sql/
-│   ├── 01_schema.sql           # DDL: base de datos, tablas, constraints y trigger (Partes 1 y 2)
-│   ├── 02_datos_ejemplo.sql    # DML: 10 vehículos, 6 clientes, 4 vendedores y 8 ventas (Parte 3)
-│   └── 03_consultas.sql        # Consultas SQL de negocio y reportes (Parte 4)
-└── diagrama/
-    └── er_diagram.png
+└── sql/
+    ├── 01_schema.sql           # DDL: base de datos, tablas, constraints y trigger (Partes 1 y 2)
+    ├── 02_datos_ejemplo.sql    # DML: 10 vehículos, 6 clientes, 4 vendedores y 8 ventas (Parte 3)
+    └── 03_consultas.sql        # Consultas SQL de negocio y reportes (Parte 4)
 ```
 
 ## Cómo ejecutarlo
